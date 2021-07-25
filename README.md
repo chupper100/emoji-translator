@@ -1,2 +1,1 @@
 # emoji-translator
-# emoji-translator
