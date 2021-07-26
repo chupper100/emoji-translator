@@ -30,17 +30,16 @@ emoji={
 def choose_mode():
     user_choice=input('ETT: Emoji To Text, TTE: Text To Emoji ').lower()
     return user_choice
-    print(user_choice)
 
 output_text=''
 
 def text_emoji(): #Text To Emoji
     input_text=str(input('Input:')).lower()
-    for word in input_text:
-        if word in emoji:
-            output_text=output_text+emoji[word]
+    for letter in input_text:
+        if letter in emoji:
+            output_text=output_text+emoji[letter]
         else:
-            output_text=output_text+word
+            output_text=output_text+letter
 
 def emoji_text(): #Emoji To Text
     input_text=str(input('Input:')).lower()
