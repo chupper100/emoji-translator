@@ -32,12 +32,14 @@ def choose_mode():
     return user_choice
 
 output_text=''
-
 def text_emoji(): #Text To Emoji
+    output_text=''
     input_text=str(input('Input:')).lower()
     for letter in input_text:
         if letter in emoji:
             output_text=output_text+emoji[letter]
+            print(i, output_text)
+            i=i+1
         else:
             output_text=output_text+letter
 
