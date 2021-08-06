@@ -47,11 +47,11 @@ def emoji_text(): #Emoji To Text
 
 def main():
     choice=choose_mode()
-    if choice=='ett':
+    if choice=='ett' or choice=='emoji to text':
         print('You have choosed to translate emoji to text.')
         print(emoji_text())
 
-    elif choice=='tte':
+    elif choice=='tte' or choice=='text to emoji':
         print('You have choosed to translate text to emoji.')
         print(text_emoji())
     else:
