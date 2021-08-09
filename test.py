@@ -26,14 +26,17 @@ emoji={
     'y':'🙄️',
     'z':'😏️',
 }
-output_text=''
+
+emoji_dict={k:v for v,k in emoji.items()}
+
+print(emoji_dict)
 input_text=str(input('Input:'))
+output_text=''
 for letter in input_text:
-    if letter in emoji.values():
-        print('yes')
-        output_text=output_text+emoji.keys(letter)
+    if letter in emoji_dict:
+        print(emoji_dict[letter])
+        output_text=output_text+emoji_dict[letter]
     else:
-        print('no')
         output_text=output_text+letter
 
 print(output_text)
