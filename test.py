@@ -29,9 +29,11 @@ emoji={
 output_text=''
 input_text=str(input('Input:'))
 for letter in input_text:
-    if emoji.values[letter]:
+    if letter in emoji.values():
+        print('yes')
         output_text=output_text+emoji.keys(letter)
     else:
+        print('no')
         output_text=output_text+letter
 
 print(output_text)
