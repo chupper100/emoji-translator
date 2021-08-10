@@ -27,16 +27,9 @@ emoji={
     'z':'😏️',
 }
 
-emoji_dict={k:v for v,k in emoji.items()}
+emoji_to_letter = {v.strip('\ufe0f'): k for k, v in emoji.items()}
+table = str.maketrans(emoji_to_letter)
 
-print(emoji_dict)
-input_text=str(input('Input:'))
-output_text=''
-for letter in input_text:
-    if letter in emoji_dict:
-        print(emoji_dict[letter])
-        output_text=output_text+emoji_dict[letter]
-    else:
-        output_text=output_text+letter
-
+input_text = input()
+output_text = input_text.translate(table)
 print(output_text)
