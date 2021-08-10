@@ -35,7 +35,7 @@ def text_emoji(emoji): #Text To Emoji
     return output_text
 
 def emoji_text(emoji): #Emoji To Text
-    input_text = input()
+    input_text = input('Input: ')
     emoji_to_letter = {v.strip('\ufe0f'): k for k, v in emoji.items()} #reserve
     table = str.maketrans(emoji_to_letter)
 
