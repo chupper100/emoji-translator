@@ -29,7 +29,7 @@ emoji = {
 
 
 def text_emoji(emoji):  # Text To Emoji
-    input_text = str(input("Input:")).lower()
+    input_text = str(input("Input: ")).lower()
     table = str.maketrans(emoji)
     output_text = input_text.translate(table)
     return output_text
@@ -39,7 +39,6 @@ def emoji_text(emoji):  # Emoji To Text
     input_text = input("Input: ")
     emoji_to_letter = {v.strip("\ufe0f"): k for k, v in emoji.items()}  # reserve
     table = str.maketrans(emoji_to_letter)
-
     output_text = input_text.translate(table)
     return output_text
 
