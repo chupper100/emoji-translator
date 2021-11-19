@@ -1,6 +1,4 @@
 # Emoji Translator
-Translate text to emoji to join your friend! 😜️
+Translation for text and emoji using the dictionary
 
-# FAQ
-- Q: Can I translate emoji to text?
-  - A: Yes
+github.com/chupper100
