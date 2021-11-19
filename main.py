@@ -44,16 +44,10 @@ def emoji_text(emoji):  # Emoji To Text
 
 
 def main(emoji):
+    cases = {"t": emoji_text, "e": text_emoji}
     choice = input("What do you want to translate to? ").lower()
-    if choice == "text" or choice == "t":
-        print("You have choosed to translate emoji to text.")
-        print(emoji_text(emoji))
-    elif choice == "emoji" or choice == "e":
-        print("You have choosed to translate text to emoji.")
-        print(text_emoji(emoji))
-    else:
-        print("Please choose a valid option!")
-        main(emoji)
+    func = cases.get(choice, "Please choose a valid option!")
+    return func(emoji)
 
 
-main(emoji)
+print(main(emoji))
