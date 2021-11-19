@@ -42,7 +42,6 @@ def emoji_text(emoji):  # Emoji To Text
     output_text = input_text.translate(table)
     return output_text
 
-
 def main(emoji):
     cases = {"t": emoji_text, "e": text_emoji}
     choice = input("What do you want to translate to? ").lower()
