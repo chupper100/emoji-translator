@@ -35,18 +35,20 @@ def text_emoji(emoji):  # Text To Emoji
     return output_text
 
 
-def emoji_text(emoji):  # Emoji To Text
+def emoji_text(text):  # Emoji To Text
     input_text = input("Input: ")
-    emoji_to_letter = {v.strip("\ufe0f"): k for k, v in emoji.items()}  # reserve
+    emoji_to_letter = {v.strip("\ufe0f"): k for k, v in text.items()}  # reserve
     table = str.maketrans(emoji_to_letter)
     output_text = input_text.translate(table)
     return output_text
 
-def main(emoji):
+
+def main(value):
     cases = {"t": emoji_text, "e": text_emoji}
     choice = input("What do you want to translate to? ").lower()
+
     func = cases.get(choice, "Please choose a valid option!")
-    return func(emoji)
+    return func(value)
 
 
 print(main(emoji))
